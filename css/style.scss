@@ -210,7 +210,6 @@ body {
             margin-bottom: 10px;
             @include fontsize(12);
           }
-          
         }
       }
     }
@@ -226,21 +225,101 @@ body {
         ul {
           .item-box {
             width: calc( ( 100% - 4px ) / 3 );
+            padding-bottom: 5px;
+            
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+            
+            .item-name {
+              margin-top: 5px;
+            }
           }
         }
       }
       
     }
     
-    
-    
     @media (max-width: 550px) {
       
-      .items {
+      .pc_title {
+         display: none;
+       }
+    }
+  }
+
+// POPULARアイテムエリア
+  #popular_item {
+    
+    .container {
+      
+      .sp_title{
         
-        .pc_title {
+        display: block;
+        margin: 0 auto;
+      }
+      
+        ul {
+          list-style: none;
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+         
+        .item-box {
+          background-color: #ffffff;
+          padding: 10px 10px 0 10px;
+          width: calc( ( 100% - 2px ) / 2 );
+          margin-bottom: 2px;
+          
+          
+          .item-name{
+            
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include fontsize(12);
+          }
+          
+          .item-price {
+            
+            margin-bottom: 10px;
+            @include fontsize(12);
+          }
+        }
+      }
+    }
+    
+    @media (min-width: 551px) {
+      .container {
+        .sp_title {
           display: none;
         }
       }
+      
+      .item-boxes {
+        ul {
+          .item-box {
+            width: calc( ( 100% - 4px ) / 3 );
+            padding-bottom: 5px;
+            
+             img {
+              display: block;
+              margin: 0 auto;
+            }
+            .item-name {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 550px) {
+        
+      .pc_title {
+         display: none;
+       }
     }
   }
