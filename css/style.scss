@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+$beige: #f9f8f6;
+$brown1: #887f69;
+$red: #9d1a2d;
+
+@mixin fontsize($size: 10, $base: 10) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+
+html {
+    font-size: 62.5%;
+    
+    *, *:before, *:after {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+             -o-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+}
+
+body {
+    background-color: $beige;
+    @include fontsize(12);
+}
+
+
+// ヘッダーエリア
+
+#header {
+  
+    .container {
+      
+
+    
+    .sp_logo {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .sp_navi_li {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 0;
+      margin-bottom: -20px;
+      
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 10px;
+        
+      }
+      
+    .sp_menu_li{
+      margin: 0;
+      padding: 0;
+      display: none;
+      
+        li {
+          list-style: none;
+          
+          a {
+            color: $brown1;
+            text-decoration: none;
+            @include fontsize(14);
+            display: block;
+            padding: 10px 8px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+        
+    }
+      
+  }
+    
+    
+@media (min-width: 551px) {
+    .sp_logo {
+      display: none;
+    }
+    
+    .sp_navi_li {
+      display: none;
+    }
+  
+  
+    .sp_menu_li{
+        li {
+          display: none;
+        }
+      }
+      
+    .pc_logo {
+      
+      
+      padding-top: 30px;
+      margin: 0;
+      
+    }
+      
+    .pc_navi_li {
+      
+      margin-top: 40px;
+      margin-left: 30px;
+      padding-left: 42px;
+      
+      
+      ul {
+        list-style: none;
+        
+        li {
+          display: inline-block;
+          margin: 7px;
+        
+        }
+        
+        .face {
+            margin-right: 0;
+          }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+      
+      .pc_logo {
+          display: none;
+        }
+        
+      .pc_navi_li {
+        display: none;
+        }
+      }
+    
+  }
+    
+}
+
+// アイキャッチエリア
+  #banner {
+   
+  .owl-theme {
+    
+    .owl-dots {
+      
+      text-align: left;
+      
+      .owl-dot {
+        
+        &.active {
+          span {
+            background-color: $red;
+          }
+        }
+        
+        span {
+          
+          border-radius: 0;
+          height: 3px;
+          width: 30px;
+          margin-left: 0;
+          margin-right: 10px;
+          
+          }
+        }
+      }
+    }
+ 
+  }
+  
+// Newアイテムエリア
+  #new_item {
+    
+    .container {
+      
+      .sp_title{
+        
+        display: block;
+        margin: 0 auto;
+      }
+      
+        ul {
+          list-style: none;
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+         
+        .item-box {
+          background-color: #ffffff;
+          padding: 10px 10px 0 10px;
+          width: calc( ( 100% - 2px ) / 2 );
+          margin-bottom: 2px;
+          
+          
+          .item-name{
+            
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include fontsize(12);
+          }
+          
+          .item-price {
+            
+            margin-bottom: 10px;
+            @include fontsize(12);
+          }
+          
+        }
+      }
+    }
+    
+    @media (min-width: 551px) {
+      .container {
+        .sp_title {
+          display: none;
+        }
+      }
+      
+      .item-boxes {
+        ul {
+          .item-box {
+            width: calc( ( 100% - 4px ) / 3 );
+          }
+        }
+      }
+      
+    }
+    
+    
+    
+    @media (max-width: 550px) {
+      
+      .items {
+        
+        .pc_title {
+          display: none;
+        }
+      }
+    }
+  }
