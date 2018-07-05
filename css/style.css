@@ -156,4 +156,89 @@ body {
   #popular_item .pc_title {
     display: none; } }
 
+#shopping .sp_guide {
+  display: block;
+  margin: 0 auto; }
+#shopping .guide-boxes {
+  margin-top: 20px; }
+  #shopping .guide-boxes ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #shopping .guide-boxes ul .guide-box {
+      list-style: none;
+      background-color: #ffffff;
+      padding: 25px 25px 30px 25px;
+      width: 100%; }
+      #shopping .guide-boxes ul .guide-box .title {
+        color: #887f69;
+        margin-bottom: 0px;
+        font-size: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px; }
+      #shopping .guide-boxes ul .guide-box .otodoke {
+        color: #887f69;
+        margin-top: 7px;
+        font-size: 13px;
+        font-size: 1.3rem;
+        margin-bottom: 5px; }
+      #shopping .guide-boxes ul .guide-box .paket {
+        color: #887f69;
+        margin-top: 7px;
+        margin-bottom: 5px;
+        font-size: 13px;
+        font-size: 1.3rem; }
+      #shopping .guide-boxes ul .guide-box .card {
+        color: #887f69;
+        font-size: 13px;
+        font-size: 1.3rem;
+        margin-top: -10px;
+        margin-bottom: 10px; }
+      #shopping .guide-boxes ul .guide-box .daikin {
+        color: #887f69;
+        font-size: 13px;
+        font-size: 1.3rem;
+        margin-top: 5px;
+        margin-bottom: 5px; }
+      #shopping .guide-boxes ul .guide-box .ginkou {
+        color: #887f69;
+        font-size: 13px;
+        font-size: 1.3rem;
+        margin-top: 7px;
+        margin-bottom: 5px; }
+      #shopping .guide-boxes ul .guide-box .des {
+        margin-left: 2px;
+        font-size: 13px;
+        font-size: 1.3rem; }
+      #shopping .guide-boxes ul .guide-box .des1 {
+        margin-left: 4px;
+        font-size: 13px;
+        font-size: 1.3rem;
+        letter-spacing: -3px; }
+        #shopping .guide-boxes ul .guide-box .des1 .des2 {
+          font-size: 13px;
+          font-size: 1.3rem;
+          margin-left: 5px; }
+      #shopping .guide-boxes ul .guide-box span {
+        font-size: 21px;
+        font-size: 2.1rem;
+        margin-bottom: 5px; }
+@media (max-width: 550px) {
+  #shopping .pc_guide {
+    display: none; } }
+@media (min-width: 551px) {
+  #shopping .sp_guide {
+    display: none; }
+  #shopping .guide-boxes ul .guide-box {
+    width: calc( (100% - 6px) / 2);
+    padding-bottom: 25px; }
+    #shopping .guide-boxes ul .guide-box img {
+      margin-top: 5px; }
+    #shopping .guide-boxes ul .guide-box .card {
+      margin-top: -10px;
+      margin-bottom: 5px; }
+    #shopping .guide-boxes ul .guide-box .daikin {
+      margin-top: -3px; } }
+
 /*# sourceMappingURL=style.css.map */
