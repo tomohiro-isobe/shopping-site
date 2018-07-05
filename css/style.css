@@ -241,4 +241,123 @@ body {
     #shopping .guide-boxes ul .guide-box .daikin {
       margin-top: -3px; } }
 
+#sidebar .contents .search {
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: -20px; }
+  #sidebar .contents .search input {
+    height: 30px;
+    width: 85%;
+    margin-top: 20px;
+    background-image: url("../images/top/search_icon.png");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-color: #eeeeee;
+    border-radius: 0;
+    border: none; }
+    #sidebar .contents .search input::placeholder {
+      color: #b5b5b5; }
+#sidebar .contents .link {
+  height: 40px;
+  background-color: #887f69;
+  margin-top: 15px;
+  background-image: url("../images/top/next_icon.png");
+  background-position: 96% center;
+  background-repeat: no-repeat; }
+  #sidebar .contents .link img {
+    margin: 15px; }
+#sidebar .contents .categories {
+  margin-top: 10px; }
+  #sidebar .contents .categories .category-img {
+    background-color: #887f69;
+    height: 40px;
+    background-image: url("../images/top/down_icon.png");
+    background-repeat: no-repeat;
+    background-position: 96% center; }
+    #sidebar .contents .categories .category-img img {
+      margin: 15px; }
+  #sidebar .contents .categories ul .category {
+    background-color: #ffffff;
+    height: 40px;
+    list-style: none;
+    margin-bottom: 2px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    background-image: url(../images/top/next_icon_gray.png);
+    background-repeat: no-repeat;
+    background-position: 96% center; }
+#sidebar .contents .about {
+  margin-top: -15px; }
+  #sidebar .contents .about .title-img {
+    height: 40px;
+    background-color: #887f69; }
+    #sidebar .contents .about .title-img img {
+      margin: 15px; }
+  #sidebar .contents .about .about-boxes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 7px 10px; }
+    #sidebar .contents .about .about-boxes .about-box {
+      width: calc(100% / 2); }
+      #sidebar .contents .about .about-boxes .about-box .more {
+        margin-left: 10px;
+        margin-top: 7px; }
+      #sidebar .contents .about .about-boxes .about-box .text {
+        margin-left: 10px; }
+#sidebar .contents .shop {
+  margin-top: 10px; }
+  #sidebar .contents .shop .title-img {
+    height: 40px;
+    background-color: #887f69; }
+    #sidebar .contents .shop .title-img img {
+      margin: 15px; }
+  #sidebar .contents .shop .shop-boxes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px 7px 10px; }
+    #sidebar .contents .shop .shop-boxes .shop-box {
+      width: calc(100% / 2); }
+      #sidebar .contents .shop .shop-boxes .shop-box .more {
+        margin-left: 10px;
+        margin-top: 7px; }
+      #sidebar .contents .shop .shop-boxes .shop-box .text {
+        margin-left: 10px; }
+@media (max-width: 550px) {
+  #sidebar .contents .title {
+    display: none; } }
+@media (min-width: 551px) {
+  #sidebar .contents .search {
+    padding-top: 10px; }
+    #sidebar .contents .search .title {
+      color: #887f69;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 13px;
+      margin-bottom: -10px; }
+  #sidebar .contents .about .about-boxes {
+    display: block; }
+    #sidebar .contents .about .about-boxes .about-box {
+      width: 100%;
+      padding-bottom: 10px; }
+      #sidebar .contents .about .about-boxes .about-box .more {
+        margin: 0 auto;
+        display: block; }
+      #sidebar .contents .about .about-boxes .about-box .text {
+        margin: 0; }
+  #sidebar .contents .shop .shop-boxes {
+    display: block; }
+    #sidebar .contents .shop .shop-boxes .shop-box {
+      width: 100%;
+      padding-bottom: 10px; }
+      #sidebar .contents .shop .shop-boxes .shop-box .more {
+        margin: 0 auto;
+        display: block; }
+      #sidebar .contents .shop .shop-boxes .shop-box .text {
+        margin: 0; } }
+
 /*# sourceMappingURL=style.css.map */

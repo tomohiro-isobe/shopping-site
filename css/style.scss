@@ -443,4 +443,193 @@ body {
     }
   }
   
-  
+// サイドバーエリア
+  #sidebar {
+    
+    .contents {
+      
+      .search {
+        text-align: center;
+        background-color: #ffffff;
+        
+        margin-top: -20px;
+        
+        input {
+          height: 30px;
+          width: 85%;
+          margin-top: 20px;
+          background-image: url("../images/top/search_icon.png");
+          background-repeat: no-repeat;
+          background-position: 98% center;
+          background-color: #eeeeee;
+          border-radius: 0;
+          border: none;
+          
+          &::placeholder {
+            color: #b5b5b5;
+          }
+        }
+      }
+  // ページリンク
+      .link {
+        height: 40px;
+        background-color: $brown1;
+        margin-top: 15px;
+        background-image: url("../images/top/next_icon.png");
+        background-position: 96% center;
+        background-repeat: no-repeat;
+        
+        img{
+          margin: 15px;
+        }
+      }
+  // カテゴリー
+      .categories {
+        margin-top: 10px;
+        .category-img {
+          background-color: $brown1;
+          height: 40px;
+          background-image: url("../images/top/down_icon.png");
+          background-repeat: no-repeat;
+          background-position: 96% center;
+          img{
+            margin: 15px;
+          }
+        }
+        ul {
+          
+          .category {
+            background-color: #ffffff;
+            height: 40px;
+            list-style: none;
+            margin-bottom: 2px;
+            padding-top: 12px;
+            padding-bottom: 10px;
+            padding-left: 17px;
+            background-image: url(../images/top/next_icon_gray.png);
+            background-repeat: no-repeat;
+            background-position: 96% center;
+            
+          }
+        }
+      }
+  // ABOUT
+      .about {
+        margin-top: -15px;
+        
+        .title-img {
+          height: 40px;
+          background-color: $brown1;
+          img {
+            margin: 15px;
+          }
+        }
+        .about-boxes {
+          background-color: #ffffff;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 10px 7px 10px;
+          
+          .about-box {
+           width: calc(100% / 2);
+           
+           .more {
+             margin-left: 10px;
+             margin-top: 7px;
+           }
+           .text {
+             margin-left: 10px;
+           }
+          }
+        }
+      }
+  // SHOP
+      .shop {
+        margin-top: 10px;
+        
+        .title-img {
+          height: 40px;
+          background-color: $brown1;
+          img {
+            margin: 15px;
+          }
+        }
+        .shop-boxes {
+          background-color: #ffffff;
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 10px 7px 10px;
+          
+          .shop-box {
+           width: calc(100% / 2);
+           
+           .more {
+             margin-left: 10px;
+             margin-top: 7px;
+           }
+           .text {
+             margin-left: 10px;
+           }
+          }
+        }
+      }
+      @media (max-width: 550px) {
+        .title {
+          display: none;
+        }
+      }
+      
+      
+      @media (min-width: 551px) {
+
+        .search {
+          padding-top: 10px;
+          
+          .title {
+          color: $brown1;
+          @include fontsize(14);
+          font-weight: bold;
+          text-align: left;
+          margin-left: 13px;
+          margin-bottom: -10px;
+          }
+        }
+        .about {
+          .about-boxes {
+            display: block;
+            
+            .about-box {
+              width: 100%;
+              padding-bottom: 10px;
+              
+              .more {
+                margin: 0 auto;
+                display: block;
+              }
+              .text {
+                margin: 0;
+              }
+            }
+          }
+        }
+        .shop {
+          .shop-boxes {
+            display: block;
+            
+            .shop-box {
+              width: 100%;
+              padding-bottom: 10px;
+              
+              .more {
+                margin: 0 auto;
+                display: block;
+              }
+              .text {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
