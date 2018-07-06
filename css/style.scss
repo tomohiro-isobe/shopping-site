@@ -43,14 +43,14 @@ body {
       display: block;
     }
     .sp_navi_li {
-      text-align: center;
+      display: flex;
+      justify-content: center;
       margin-top: 10px;
       margin-bottom: 0;
       margin-bottom: -20px;
       
       li {
         list-style: none;
-        display: inline-block;
         margin-right: 10px;
         
       }
@@ -58,20 +58,27 @@ body {
     .sp_menu_li{
       margin: 0;
       padding: 0;
+      position: absolute;
+      z-index:10;
+      opacity: 1;
       display: none;
       
         li {
+         
           list-style: none;
-          
+          margin-bottom: 2px;
+          border-bottom: 1px solid #eee;
           a {
             color: $brown1;
             text-decoration: none;
             @include fontsize(14);
             display: block;
             padding: 10px 8px;
-            border-bottom: 1px solid #eee;
             font-weight: bold;
             text-align: center;
+            &:hover {
+              color: blue;
+            }
           }
         }
         
