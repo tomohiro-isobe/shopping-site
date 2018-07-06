@@ -2,6 +2,7 @@
 
 $beige: #f9f8f6;
 $brown1: #887f69;
+$brown2: #b8b4ac;
 $red: #9d1a2d;
 
 @mixin fontsize($size: 10, $base: 10) {
@@ -105,17 +106,20 @@ body {
     }
       
     .pc_navi_li {
-      
+      padding-right: 0;
+      margin-right: -70px;
       
       ul {
         list-style: none;
         display: flex;
         align-items: baseline;
-        margin-top: 35px;
+        margin-top: 47px;
+        padding-left: 70px;
+        
         
         li {
           
-          margin: 7px;
+          margin: 0 7px;
         
         }
         
@@ -634,4 +638,60 @@ body {
         }
       }
     }
+  }
+  // footerエリア
+  #footer {
+    
+    .foo-img {
+      margin: 20px 0;
+      
+      img {
+        margin: 0 auto;
+        display: block;
+        
+      }
+    }
+    .foo-list {
+      border-top: 1px solid $brown1;
+      margin-bottom: 100px;
+      
+      ul {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        margin-bottom: 0;
+        padding: 13px;
+        li {
+          list-style: none;
+          margin-left: 2px;
+          margin-bottom: 2px;
+          
+          @include fontsize(12);
+          
+        }
+        
+      }
+      .copy {
+        margin-top: -10px;
+        text-align: center;
+        color: $brown2;
+        letter-spacing: .3px;
+      }
+    }
+    
+    @media (min-width: 551px) {
+         .foo-img {
+           img {
+              margin-left: 92%;
+           }
+         }
+         .foo-list {
+           ul {
+             li {
+               margin: 10px;
+             }
+           }
+         }
+      }
   }
