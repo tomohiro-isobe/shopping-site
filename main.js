@@ -12,4 +12,6 @@ $(function() {
         $('.sp_menu_li').slideToggle();
         $('.sp_menu_li').css('background-color', '#f9f8f6');
     });
+    
+    $('.bred_crumb').rcrumbs();
 });
