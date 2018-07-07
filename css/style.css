@@ -415,10 +415,12 @@ body {
   #footer .foo-list ul li {
     margin: 10px; } }
 
+#contents {
+  margin-top: 20px; }
+
 .bred_crumb {
   background-color: #e8e4da;
-  height: 40px;
-  margin-top: 15px; }
+  height: 40px; }
   .bred_crumb ul {
     list-style: none;
     display: flex;
@@ -443,6 +445,8 @@ body {
     #cate_name .pc_cate {
       display: none; } }
   @media (min-width: 551px) {
+    #cate_name .pc_cate {
+      width: 100%; }
     #cate_name .sp_cate {
       display: none; } }
 
@@ -515,5 +519,54 @@ body {
         font-size: 14px;
         font-size: 1.4rem;
         font-weight: bold; }
+
+#recently_item .recent-title {
+  margin: 25px; }
+  #recently_item .recent-title .sp_recent {
+    margin: 0 auto;
+    display: block; }
+#recently_item .recent-boxes ul {
+  list-style: none;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  #recently_item .recent-boxes ul .recent-box {
+    background-color: #ffffff;
+    padding: 10px 10px 0 10px;
+    width: calc( ( 100% - 2px ) / 2 );
+    margin-bottom: 2px; }
+    #recently_item .recent-boxes ul .recent-box .item-name {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-size: 1.3rem;
+      margin-left: 5px; }
+    #recently_item .recent-boxes ul .recent-box .item-price {
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-size: 1.3rem;
+      margin-left: 5px;
+      letter-spacing: 1px; }
+@media (min-width: 551px) {
+  #recently_item .recent-boxes .recent-boxes ul .item-box {
+    width: calc( ( 100% - 4px ) / 3 );
+    padding-bottom: 5px; }
+    #recently_item .recent-boxes .recent-boxes ul .item-box img {
+      display: block;
+      margin: 0 auto; }
+    #recently_item .recent-boxes .recent-boxes ul .item-box .item-name {
+      margin-top: 5px; } }
+@media (max-width: 550px) {
+  #recently_item .pc_recent {
+    display: none; } }
+@media (min-width: 551px) {
+  #recently_item .recent-title {
+    margin: 30px auto; }
+    #recently_item .recent-title .pc_recent {
+      width: 100%; }
+    #recently_item .recent-title .sp_recent {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
