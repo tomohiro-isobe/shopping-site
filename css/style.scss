@@ -1025,12 +1025,14 @@ body {
       .item-title {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         height: 50px;
+        padding: 30px 0;
         margin-left: 50px;
         margin-right: 50px;
         
         .name {
-          padding: 4px 0;
+          
         }
         span {
           padding: 4px 0;
@@ -1113,7 +1115,7 @@ body {
           
             .price-box {
               border-top: 1px solid $green;
-              
+              border-bottom: 1px solid $green;
              
               .price {
               display: flex;
@@ -1167,14 +1169,17 @@ body {
         
       @media (min-width: 551px) {
         margin-top: 20px;
-        
+        margin-left: 50px;
+        margin-right: 50px;
         .price-boxes {
           display: flex;
           justify-content: space-between;
+          border-bottom: 1px solid $green;
           
           .price-box {
             margin-right: 20px;
             flex: 1;
+            border-bottom: 0;
           }
           .image-box {
             img {
@@ -1184,5 +1189,66 @@ body {
         }
       }
     }
+    
+  // 商品説明エリア
+  #product_description {
+    margin-top: 20px;
+    
+    .title {
+      color: $brown1;
+      font-weight: bold;
+      @include fontsize(14);
+    }
+    .main {
+      border-top: 1px solid $brown1;
+      margin-top: 10px;
+      
+      
+      .head {
+        color: $brown1;
+        font-weight: bold;
+        margin-bottom: 10px;
+        @include fontsize(14);
+        
+        span {
+          color: $brown1;
+          @include fontsize(24);
+        }
+      }
+    }
+    table {
+      border: 1px solid $brown3;
+      width: 100%;
+      margin-top: 15px;
+      color: $brown1;
+      
+       th {
+         padding: 12px 20px;
+         background-color: $brown4;
+         .head {
+           width: 40px;
+           margin: 0 auto;
+           display: block;
+           font-weight: normal;
+         }
+       }
+       td {
+         border: 1px solid $brown3;
+         padding: 12px 10px;
+       }
+    }
+    @media (min-width: 551px) {
+        margin-left: 50px;
+        margin-right: 50px;
+      .main {
+       .head {
+         margin-top: 10px;
+       }
+      }
+      table {
+         margin-top: 20px;
+       }
+    }
+  }
  
     

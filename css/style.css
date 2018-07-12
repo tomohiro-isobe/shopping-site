@@ -609,11 +609,11 @@ body {
   .item-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
+    padding: 30px 0;
     margin-left: 50px;
     margin-right: 50px; }
-    .item-title .name {
-      padding: 4px 0; }
     .item-title span {
       padding: 4px 0; }
 
@@ -665,7 +665,8 @@ body {
           transform: scale(1.5);
           color: #ffffff; }
   #color .price-boxes .price-box {
-    border-top: 1px solid #e3e8cf; }
+    border-top: 1px solid #e3e8cf;
+    border-bottom: 1px solid #e3e8cf; }
     #color .price-boxes .price-box .price {
       display: flex;
       align-items: center; }
@@ -701,14 +702,63 @@ body {
     margin: 10px auto; }
   @media (min-width: 551px) {
     #color {
-      margin-top: 20px; }
+      margin-top: 20px;
+      margin-left: 50px;
+      margin-right: 50px; }
       #color .price-boxes {
         display: flex;
-        justify-content: space-between; }
+        justify-content: space-between;
+        border-bottom: 1px solid #e3e8cf; }
         #color .price-boxes .price-box {
           margin-right: 20px;
-          flex: 1; }
+          flex: 1;
+          border-bottom: 0; }
         #color .price-boxes .image-box img {
           margin: 0; } }
+
+#product_description {
+  margin-top: 20px; }
+  #product_description .title {
+    color: #887f69;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 1.4rem; }
+  #product_description .main {
+    border-top: 1px solid #887f69;
+    margin-top: 10px; }
+    #product_description .main .head {
+      color: #887f69;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-size: 1.4rem; }
+      #product_description .main .head span {
+        color: #887f69;
+        font-size: 24px;
+        font-size: 2.4rem; }
+  #product_description table {
+    border: 1px solid #e8e4da;
+    width: 100%;
+    margin-top: 15px;
+    color: #887f69; }
+    #product_description table th {
+      padding: 12px 20px;
+      background-color: #f9f9f5; }
+      #product_description table th .head {
+        width: 40px;
+        margin: 0 auto;
+        display: block;
+        font-weight: normal; }
+    #product_description table td {
+      border: 1px solid #e8e4da;
+      padding: 12px 10px; }
+  @media (min-width: 551px) {
+    #product_description {
+      margin-left: 50px;
+      margin-right: 50px; }
+      #product_description .main .head {
+        margin-top: 10px; }
+      #product_description table {
+        margin-top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
