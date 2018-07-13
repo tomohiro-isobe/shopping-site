@@ -476,11 +476,12 @@ body {
         .search-box {
           position: relative;
           margin-bottom: 10px;
+          padding: 15px 0;
         
           input {
             height: 30px;
             // width: 85%;
-            width: 100%;
+            width: 90%;
             margin: 0;
             //margin-top: 20px;
             // background-image: url("../images/top/search_icon.png");
@@ -497,22 +498,29 @@ body {
           
           img {
             position: absolute;
-            right: 10px;
-            top: 6px;
+            right: 22px;
+            top: 22px;
           }
         }
       }
   // ページリンク
       .link {
+        position: relative;
         height: 40px;
         background-color: $brown1;
         margin-top: 15px;
-        background-image: url("../images/top/next_icon.png");
-        background-position: 96% center;
-        background-repeat: no-repeat;
+        // background-image: url("../images/top/next_icon.png");
+        // background-position: 96% center;
+        // background-repeat: no-repeat;
         
-        img{
-          margin: 15px;
+        .page {
+          display: block;
+          padding: 15px;
+        }
+        .next{
+          position: absolute;
+          right: 20px;
+          top: 13px;
         }
       }
   // カテゴリー
@@ -535,6 +543,7 @@ body {
         ul {
           
           .category {
+            position: relative;
             background-color: #ffffff;
             height: 40px;
             list-style: none;
@@ -542,10 +551,14 @@ body {
             padding-top: 12px;
             padding-bottom: 10px;
             padding-left: 17px;
-            background-image: url(../images/top/next_icon_gray.png);
-            background-repeat: no-repeat;
-            background-position: 96% center;
-            
+            // background-image: url(../images/top/next_icon_gray.png);
+            // background-repeat: no-repeat;
+            // background-position: 96% center;
+            img {
+              position: absolute;
+              right: 20px;
+              
+            }
           }
         }
       }
@@ -619,19 +632,32 @@ body {
       @media (min-width: 551px) {
 
         .search {
-          padding: 10px 20px;
+          padding: 10px 10px;
+          
+          .search-box {
+            margin: 0;
+            padding: 10px 0;
+            width: 100%;
+            
+            img {
+              top: 17px;
+              right: 17px;
+            }
+            input {
+              
+            }
+          }
           
           .title {
           color: $brown1;
           @include fontsize(13);
           font-weight: bold;
           text-align: left;
+          padding-left: 10px;
           //margin-left: 10px;
           // margin-bottom: -15px;
-          margin-bottom: 5px;
-          }
-          input {
-            width: 90%;
+          
+          
           }
         }
         .about {
@@ -971,6 +997,7 @@ body {
   // products.html
   #products {
     margin-top: 20px;
+    
     .nine {
       background-color: #ffffff;
     }
@@ -993,7 +1020,7 @@ body {
       margin-top: 10px;
       margin-bottom: 10px;
       
-      .main-image {
+      #main-image {
         flex: 5 5 40px;
         img {
           display:block;
@@ -1001,7 +1028,7 @@ body {
         }
       }
       
-      .sub-image {
+      #sub-image {
        
         margin-top: 10px;
         display: flex;
@@ -1042,14 +1069,14 @@ body {
         margin: 20px 50px 0 50px;
         display: flex;
         
-        .main-image {
+        #main-image {
           flex: 5 5 40px;
           img {
             display: block;
             width: 100%;
           }
         }
-        .sub-image {
+        #sub-image {
           flex: 2 2 10px;
           margin-top: 0;
           margin-left: 10px;
@@ -1247,7 +1274,213 @@ body {
       }
       table {
          margin-top: 20px;
+         margin-bottom: 70px;
        }
+    }
+  }
+  // 最近見た商品
+  #p_recently_item {
+    background-color: $beige;
+    padding-top: 10px;
+    .p-recent-title {
+      margin: 10px;
+      .sp_recent {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .p-recent-boxes {
+      
+      ul {
+          list-style: none;
+          margin-top: 20px;
+          margin-bottom: 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+         
+        .p-recent-box {
+          background-color: #ffffff;
+          padding: 10px 10px 0 10px;
+          width: calc( ( 100% - 2px ) / 2 );
+          margin-bottom: 2px;
+          
+          .item-name{
+            
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include fontsize(13);
+            margin-left: 5px;
+          }
+          
+          .item-price {
+            
+            margin-bottom: 10px;
+            @include fontsize(13);
+            margin-left: 5px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    
+    @media (min-width: 551px) {
+      .p-recent-title {
+          margin: 20px 0 0 0;
+  
+            .pc_recent {
+              width: 100%;
+            }
+            .sp_recent {
+              display: none;
+            }
+        }
+      
+      .p-recent-boxes {
+        ul {
+          
+          .p-recent-box {
+            width: calc( (100% - 4px) / 3);
+            padding-bottom: 5px;
+            
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+            
+            .item-name {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 550px) {
+      .pc_recent {
+        display: none;
+      }
+    }
+  }
+  
+// Shopping Guideエリア
+  #p_shopping {
+    background-color: $beige;
+    padding-top: 20px;
+    
+    .sp_guide {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .p-guide-boxes {
+      margin-top: 20px;
+      ul {
+        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        
+        .p-guide-box {
+          list-style: none;
+          background-color: #ffffff;
+          padding: 25px 25px 30px 25px;
+          width: 100%;
+          
+          .title {
+            color: $brown1;
+            margin-bottom: 0px;
+            @include fontsize(15);
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+          .otodoke {
+            color: $brown1;
+            margin-top: 7px;
+            @include fontsize(13);
+            margin-bottom: 5px;
+          }
+          .paket {
+            color: $brown1;
+            margin-top: 7px;
+            margin-bottom: 5px;
+            @include fontsize(13);
+          }
+          .card {
+            color: $brown1;
+            @include fontsize(13);
+            margin-top: -10px;
+            margin-bottom: 10px;
+          }
+          .daikin {
+            color: $brown1;
+            @include fontsize(13);
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+          .ginkou {
+            color: $brown1;
+            @include fontsize(13);
+            margin-top: 7px;
+            margin-bottom: 5px;
+          }
+          .des {
+            margin-left: 2px;
+            @include fontsize(13);
+          }
+          .des1 {
+            margin-left: 4px;
+            @include fontsize(13);
+            letter-spacing: -3px;
+            .des2 {
+              @include fontsize(13);
+              margin-left: 5px;
+            }
+          }
+          span {
+            @include fontsize(21);
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 550px) {
+      .pc_guide {
+        display: none;
+      }
+    }
+    
+    @media (min-width: 551px) {
+      padding: 30px 0;
+      .sp_guide {
+        display: none;
+      }
+      .p-guide-boxes {
+        
+        ul {
+          .p-guide-box {
+            width: calc( (100% - 6px) / 2);
+            padding-bottom: 25px;
+            
+            img{
+              margin-top: 5px;
+            }
+            .card {
+              margin-top: -10px;
+              margin-bottom: 5px;
+            }
+            .daikin {
+              margin-top: -3px;
+            }
+            .ginkou {
+             
+            }
+          }
+        }
+      }
     }
   }
  
